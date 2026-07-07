@@ -360,9 +360,445 @@ const budgetData = {
 
     },
 
-    worker:{},
+  worker:{
 
-    retired:{},
+    // =============================
+    // Thu nhập dưới 5 triệu
+    // =============================
+
+    low:{
+
+        single:{
+
+            male:{
+
+                title:"Nam - Độc thân (<5 triệu)",
+
+                fixed:[
+
+                    {
+                        name:"🏠 Tiền thuê nhà (đã bao gồm điện, nước và Internet)",
+                        amount:1800000
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Ăn uống",percent:40},
+
+                    {name:"🛵 Đi lại",percent:15},
+
+                    {name:"📱 Điện thoại",percent:5},
+
+                    {name:"🎮 Giải trí",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:15},
+
+                    {name:"🚑 Dự phòng",percent:15}
+
+                ]
+
+            },
+
+            female:{
+
+                title:"Nữ - Độc thân (<5 triệu)",
+
+                fixed:[
+
+                    {
+
+                        name:"🏠 Tiền thuê nhà (đã bao gồm điện, nước và Internet)",
+
+                        amount:1800000
+
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Ăn uống",percent:35},
+
+                    {name:"🛵 Đi lại",percent:15},
+
+                    {name:"💄 Chăm sóc cá nhân",percent:10},
+
+                    {name:"🎬 Giải trí",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:15},
+
+                    {name:"🚑 Dự phòng",percent:15}
+
+                ]
+
+            }
+
+        }
+
+    },
+
+    // =============================
+    // Thu nhập 5-10 triệu
+    // =============================
+
+    medium:{
+
+        single:{
+
+            male:{
+
+                title:"Nam - Độc thân (5-10 triệu)",
+
+                fixed:[
+
+                    {
+
+                        name:"🏠 Tiền thuê nhà (đã bao gồm điện, nước và Internet)",
+
+                        amount:2500000
+
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Ăn uống",percent:35},
+
+                    {name:"🛵 Đi lại",percent:15},
+
+                    {name:"👕 Quần áo",percent:10},
+
+                    {name:"⚽ Thể thao",percent:10},
+
+                    {name:"🎮 Giải trí",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:20}
+
+                ]
+
+            },
+
+            female:{
+
+                title:"Nữ - Độc thân (5-10 triệu)",
+
+                fixed:[
+
+                    {
+
+                        name:"🏠 Tiền thuê nhà (đã bao gồm điện, nước và Internet)",
+
+                        amount:2500000
+
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Ăn uống",percent:35},
+
+                    {name:"🛵 Đi lại",percent:10},
+
+                    {name:"💄 Chăm sóc cá nhân",percent:15},
+
+                    {name:"🧘 Thể thao",percent:10},
+
+                    {name:"🎬 Giải trí",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:20}
+
+                ]
+
+            }
+
+        },
+
+        married:{
+
+            male:{
+
+                title:"Nam - Đã kết hôn (5-10 triệu)",
+
+                fixed:[
+
+                    {
+
+                        name:"🏠 Tiền thuê nhà (đã bao gồm điện, nước và Internet)",
+
+                        amount:3000000
+
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Sinh hoạt gia đình",percent:45},
+
+                    {name:"🛵 Đi lại",percent:10},
+
+                    {name:"❤️ Vợ chồng",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:20},
+
+                    {name:"🚑 Dự phòng",percent:15}
+
+                ]
+
+            }
+
+        }
+
+    },
+
+    // =============================
+    // Thu nhập 10-20 triệu
+    // =============================
+
+    high:{
+
+        single:{},
+
+        married:{},
+
+        children:{
+
+            male:{
+
+                title:"Nam - Có con (10-20 triệu)",
+
+                fixed:[
+
+                    {
+
+                        name:"🏠 Tiền nhà (đã bao gồm điện, nước và Internet)",
+
+                        amount:4000000
+
+                    }
+
+                ],
+
+                categories:[
+
+                    {name:"🍚 Sinh hoạt",percent:35},
+
+                    {name:"👶 Chi phí con",percent:25},
+
+                    {name:"🚗 Đi lại",percent:10},
+
+                    {name:"🩺 Bảo hiểm",percent:10},
+
+                    {name:"💰 Tiết kiệm",percent:20}
+
+                ]
+
+            }
+
+        }
+
+    },
+
+    // =============================
+    // Thu nhập 20-35 triệu
+    // =============================
+
+    veryHigh:{
+
+        single:{},
+
+        married:{},
+
+        children:{}
+
+    },
+
+    // =============================
+    // Trên 35 triệu
+    // =============================
+
+    rich:{
+
+        single:{},
+
+        married:{},
+
+        children:{}
+
+    }
+
+},
+
+    retired:{
+
+    male:{
+
+        title:"👴 Người nghỉ hưu Nam",
+
+        note:"Ưu tiên chi tiêu cho sức khỏe, sinh hoạt và dự phòng.",
+
+        fixed:[],
+
+        categories:[
+
+            {
+                name:"🍚 Ăn uống",
+                percent:30,
+                items:[
+                    "Thực phẩm",
+                    "Rau củ",
+                    "Sữa",
+                    "Trái cây"
+                ]
+            },
+
+            {
+                name:"💊 Thuốc men",
+                percent:25,
+                items:[
+                    "Thuốc",
+                    "Vitamin",
+                    "Thực phẩm bổ sung"
+                ]
+            },
+
+            {
+                name:"🩺 Khám sức khỏe",
+                percent:15,
+                items:[
+                    "Khám định kỳ",
+                    "Xét nghiệm",
+                    "Bảo hiểm"
+                ]
+            },
+
+            {
+                name:"🏠 Sinh hoạt",
+                percent:10,
+                items:[
+                    "Điện",
+                    "Nước",
+                    "Internet"
+                ]
+            },
+
+            {
+                name:"🚶 Dưỡng sinh",
+                percent:5,
+                items:[
+                    "Đi bộ",
+                    "Câu lạc bộ",
+                    "Thể dục"
+                ]
+            },
+
+            {
+                name:"👨‍👩‍👧 Gia đình",
+                percent:5,
+                items:[
+                    "Quà cho cháu",
+                    "Hiếu hỷ"
+                ]
+            },
+
+            {
+                name:"💰 Dự phòng",
+                percent:10,
+                items:[
+                    "Tiết kiệm",
+                    "Khẩn cấp"
+                ]
+            }
+
+        ]
+
+    },
+
+    female:{
+
+        title:"👵 Người nghỉ hưu Nữ",
+
+        note:"Ưu tiên sức khỏe, ăn uống và sinh hoạt.",
+
+        fixed:[],
+
+        categories:[
+
+            {
+                name:"🍚 Ăn uống",
+                percent:28,
+                items:[
+                    "Thực phẩm",
+                    "Sữa",
+                    "Hoa quả"
+                ]
+            },
+
+            {
+                name:"💊 Thuốc men",
+                percent:25,
+                items:[
+                    "Thuốc",
+                    "Vitamin",
+                    "Thực phẩm chức năng"
+                ]
+            },
+
+            {
+                name:"🩺 Khám sức khỏe",
+                percent:15,
+                items:[
+                    "Khám định kỳ",
+                    "Bệnh viện"
+                ]
+            },
+
+            {
+                name:"🌿 Chăm sóc cá nhân",
+                percent:10,
+                items:[
+                    "Mỹ phẩm",
+                    "Dầu gội",
+                    "Quần áo"
+                ]
+            },
+
+            {
+                name:"🧘 Dưỡng sinh",
+                percent:5,
+                items:[
+                    "Yoga",
+                    "Đi bộ"
+                ]
+            },
+
+            {
+                name:"👨‍👩‍👧 Gia đình",
+                percent:7,
+                items:[
+                    "Quà cho cháu",
+                    "Hiếu hỷ"
+                ]
+            },
+
+            {
+                name:"💰 Dự phòng",
+                percent:10,
+                items:[
+                    "Tiết kiệm",
+                    "Khẩn cấp"
+                ]
+            }
+
+        ]
+
+    }
+
+},
 
     chartColors:[
         "#2563eb",
